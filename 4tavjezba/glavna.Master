@@ -1,0 +1,31 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="glavna.master.cs" Inherits="_4tavjezba.glavna" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div style="background-color: #FFFFFF; border-color: #FFFFFF; visibility: inherit; background-image: url('img/wp.jpg');background-repeat:no-repeat;">
+            <asp:Image ID="Image1" ImageUrl="~/img/123.png" runat="server" Height="119px" Width="295px" />
+            <br />
+            <br />
+            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Ttt.aspx" Font-Bold="True" ForeColor="Lime">TicTacToe</asp:HyperLink>
+            &nbsp;&nbsp;
+            <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/login.aspx" Font-Bold="True" ForeColor="Lime">Login</asp:HyperLink>
+            &nbsp;
+            <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/admin.aspx" Font-Bold="True" ForeColor="Lime">Admin</asp:HyperLink>
+            &nbsp;
+            <asp:LoginStatus ID="LoginStatus1" runat="server" LogoutAction="Redirect" LogoutPageUrl="~/Ttt.aspx" onclick="return confirm('Odjava sa admina?');" />
+            &nbsp;
+            &nbsp;
+            &nbsp;<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
